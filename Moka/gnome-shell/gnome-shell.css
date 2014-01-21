@@ -28,12 +28,12 @@ stage {
 
 /* links */
 .shell-link {
-    color: #0000ff;
+    color: #A348B1;
     text-decoration: underline;
 }
 
 .shell-link:hover {
-    color: #0000e0;
+    color: alpha(#A348B1,0.7);
 }
 
 /* small */
@@ -68,35 +68,32 @@ StScrollView.hfade {
 }
 
 StScrollView StScrollBar {
-    min-width: 14px;
-    min-height: 14px;
+    min-width: 12px;
+    min-height: 12px;
 }
 
 StScrollBar StBin#trough {
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 8px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 6px;
 }
 
-StScrollBar StButton#vhandle {
-    background-color: #5d6464;
-    border: 1px solid #242424;
-    border-radius: 8px;
-}
-
+StScrollBar StButton#vhandle,
 StScrollBar StButton#hhandle {
-    background-color: #5d6464;
-    border: 1px solid #242424;
-    border-radius: 8px;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid transparent;
+    border-radius: 6px;
 }
 
 StScrollBar StButton#hhandle:hover,
 StScrollBar StButton#vhandle:hover {
-    background-color: #777d7c;
+    background-color: rgba(255,255,255,0.3);
+    border: 1px solid transparent;
 }
 
 StScrollBar StButton#hhandle:active,
 StScrollBar StButton#vhandle:active {
-    background-color: #3465a4;
+    background-color: rgba(255,255,255,0.4);
+    border: 1px solid transparent;
 }
 
 /* Check Boxes */
@@ -378,10 +375,11 @@ StScrollBar StButton#vhandle:active {
 .hotplug-notification-item,
 .hotplug-resident-eject-button,
 .modal-dialog-button {
-    border: 1px solid #8b8b8b;
+    border-radius: 4px;
+    border: none;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(255, 255, 255, 0.2);
-    background-gradient-end: rgba(255, 255, 255, 0);
+    background-gradient-start: rgba(255, 255, 255, 0.1);
+    background-gradient-end: rgba(255, 255, 255, 0.05);
 }
 
 .modal-dialog-button {
@@ -413,7 +411,7 @@ StScrollBar StButton#vhandle:active {
 .hotplug-resident-eject-button:active,
 .modal-dialog-button:active,
 .modal-dialog-button:pressed {
-    background-gradient-start: rgba(255, 255, 255, 0);
+    background-gradient-start: rgba(255, 255, 255, 0.1);
     background-gradient-end: rgba(255, 255, 255, 0.2);
 }
 
@@ -546,8 +544,8 @@ StScrollBar StButton#vhandle:active {
     caret-color: rgba(255, 255, 255, 1.0);
     border: none;
     
-    background-gradient-start: rgba(255, 255, 255, 0.1);
-    background-gradient-end: rgba(255, 255, 255, 0.1);
+    background-gradient-start: rgba(0,0,0,0.0);
+    background-gradient-end: rgba(0,0,0,0.0);
     background-gradient-direction: vertical;
 
     box-shadow:inset 0 -2px 0 0 rgba(255,255,255,0.7);
@@ -611,8 +609,6 @@ StScrollBar StButton#vhandle:active {
     -x-offset: 8px;
 }
 
-
-
 .prompt-dialog-password-entry .capslock-warning,
 .login-dialog-prompt-entry .capslock-warning {
     icon-size: 16px;
@@ -658,7 +654,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .panel-corner {
-    -panel-corner-radius: 8px;
+    -panel-corner-radius: 0px;
     -panel-corner-background-color: black;
     -panel-corner-border-width: 0;
     -panel-corner-border-color: transparent;
@@ -713,7 +709,7 @@ StScrollBar StButton#vhandle:active {
 #panel.unlock-screen .panel-button,
 #panel.lock-screen .panel-button,
 #panel.login-screen .panel-button {
-    color: #e6e6e6;
+    color: rgba(255,255,255,0.7);
 }
 
 #panel.unlock-screen .panel-button:hover,
@@ -730,7 +726,7 @@ StScrollBar StButton#vhandle:active {
 
 .panel-button:hover {
     color: white;
-    text-shadow: black 0px 2px 2px;
+    text-shadow: black 0px 1px 0px;
 }
 
 .panel-button:active,
@@ -780,14 +776,14 @@ StScrollBar StButton#vhandle:active {
 
 .system-switch-user-submenu-icon {
     icon-size: 24px;
-    border: 1px solid #8b8b8b;
+    border: 1px solid alpha(#fff,0.3);
 }
 
 .system-menu-action {
     color: #e6e6e6;
     border-radius: 32px; /* wish we could do 50% */
     padding: 13px;
-    border: 1px solid #5f5f5f; /* using rgba() is flaky unfortunately */
+    border: 1px solid alpha(#fff,0.3); /* using rgba() is flaky unfortunately */
 }
 
 .system-menu-action:hover,
@@ -801,7 +797,6 @@ StScrollBar StButton#vhandle:active {
 .system-menu-action:active {
     color: black;
     background-color: #6f6f6f;
-
 }
 
 .system-menu-action > StIcon {
@@ -831,7 +826,7 @@ StScrollBar StButton#vhandle:active {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 0px;
     border-radius: 9px 0px 0px 9px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     padding: 11px 7px 11px 11px;
 }
 
@@ -856,7 +851,7 @@ StScrollBar StButton#vhandle:active {
     border-radius: 8px;
     padding: 4px 12px;
     -shell-caption-spacing: 12px;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0,0,0,0);
 }
 
 .window-caption:hover {
@@ -932,7 +927,7 @@ StScrollBar StButton#vhandle:active {
 
 .messages-indicator-contents:hover {
     color: white;
-    text-shadow: black 0px 2px 2px;
+    text-shadow: black 0px 1px 0px;
 }
 
 .messages-indicator-highlight {
@@ -949,7 +944,7 @@ StScrollBar StButton#vhandle:active {
     color: #5f5f5f;
     font-size: 9pt;
     padding: 4px 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     border: 1px solid rgba(128, 128, 128, 0.4);
     border-left: 0px;
     border-radius: 0px 9px 9px 0px;
@@ -963,7 +958,6 @@ StScrollBar StButton#vhandle:active {
 
 .placeholder {
     background-image: url("assets/dash-placeholder.svg");
-    /*background-size: contain;*/
     height: 24px;
 }
 
@@ -991,8 +985,8 @@ StScrollBar StButton#vhandle:active {
     spacing: 20px;
 }
 
-.search-display > StBoxLayout,
 .all-apps,
+.search-display > StBoxLayout,
 .frequent-apps > StBoxLayout {
     /* horizontal padding to make sure scrollbars or dash don't overlap content */
     padding: 0px 88px 10px 88px;
@@ -1093,7 +1087,7 @@ StScrollBar StButton#vhandle:active {
 /* Running App */
 .app-well-app.running > .overview-icon {
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(0, 0, 0, 0);
+    background-gradient-start: rgba(0,0,0,0);
     background-gradient-end: rgba(255, 255, 255, 0.1);
     border-radius: 0px;
     text-shadow: black 0px 1px 0;
@@ -1196,12 +1190,11 @@ StScrollBar StButton#vhandle:active {
 
 #LookingGlassDialog .notebook-tab:hover {
     color: white;
-    text-shadow: black 0px 2px 2px;
+    text-shadow: black 0px 1px 0px;
 }
 
 #LookingGlassDialog .notebook-tab:selected {
     border-image: url("assets/panel-button-border.svg") 10 10 0 2;
-    /*background-image: url("assets/panel-button-highlight-wide.svg");*/
     background-image: none;
     color: white;
     text-shadow: black 0px 1px 0;
@@ -1277,7 +1270,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 #LookingGlassPropertyInspector {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0,0,0,0.8);
     border: 1px solid grey;
     border-radius: 4px;
     padding: 6px;
@@ -1287,7 +1280,7 @@ StScrollBar StButton#vhandle:active {
 
 .calendar-vertical-separator {
     -stipple-width: 1px;
-    -stipple-color: #505050;
+    -stipple-color: rgba(255,255,255,0.5);
     width: 0.3em;
 }
 
@@ -1302,7 +1295,7 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-month-label {
-    color: #888a85;
+    color: rgba(255,255,255,0.5);
     font-size: 9.5pt;
     font-weight: bold;
     padding-bottom: 8px;
@@ -1393,8 +1386,8 @@ StScrollBar StButton#vhandle:active {
 
 /* Hack used in lieu of border-collapse - see calendar.js */
 .calendar-day {
-    border: 1px solid #505050;
-    color: #babdb6;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.5);
     border-top-width: 0;
     border-left-width: 0;
 }
@@ -1415,7 +1408,6 @@ StScrollBar StButton#vhandle:active {
 }
 
 .calendar-today {
-    /*background-image: url("assets/calendar-today.svg");*/
     background-image: none;
     text-shadow: black 0px 1px 0px;
     font-weight: bold;
@@ -1941,8 +1933,8 @@ StScrollBar StButton#vhandle:active {
 
 .modal-dialog {
     border-radius: 1em;
-    background-color: rgba(0.0, 0.0, 0.0, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.4);;
+    background-color: rgba(0,0,0,0.9);
+    border: none;
 
     padding-right: 3em;
     padding-left: 3em;
@@ -2412,7 +2404,7 @@ StScrollBar StButton#vhandle:active {
 .login-dialog-user-list:expanded .login-dialog-user-list-item:focus .login-dialog-user-list-item-name,
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
     color: #bfbfbf;
-    text-shadow: black 0px 2px 2px;
+    text-shadow: black 0px 1px 0px;
 }
 
 .login-dialog-user-list-item:hover {
