@@ -1787,7 +1787,7 @@ StScrollBar StButton#vhandle:active {
 .osd-window .level {
     height: 0.6em;
     border-radius: 0.3em;
-    background-color: rgba(190,190,190,0.2);
+    background-color: rgba(255,255,255,0.4);
 }
 
 /* App Switcher */
@@ -1884,7 +1884,7 @@ StScrollBar StButton#vhandle:active {
 
 .workspace-switcher-container {
     background: rgba(0,0,0,0.8);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.0);
     border-radius: 24px;
     padding: 20px;
 }
@@ -1899,6 +1899,7 @@ StScrollBar StButton#vhandle:active {
 
 .ws-switcher-active-up {
     height: 96px;
+    width: 96px;
     border: 0px;
     background: rgba(255,255,255,0.5);
     background-image: url("assets/ws-switch-arrow-up.png");
@@ -1907,6 +1908,7 @@ StScrollBar StButton#vhandle:active {
 
 .ws-switcher-active-down {
     height: 96px;
+    width: 96px;
     border: 0px;
     background: rgba(255,255,255,0.5);
     background-image: url("assets/ws-switch-arrow-down.png");
@@ -2240,16 +2242,17 @@ StScrollBar StButton#vhandle:active {
 }
 
 .keyboard-key {
-    min-height: 30px;
-    min-width: 30px;
-    background-gradient-start: rgba(255,245,245,0.4);
-    background-gradient-end: rgba(105,105,105,0.1);
+    min-height: 32px;
+    min-width: 32px;
+    background-gradient-start: rgba(255,255,255,0.2);
+    background-gradient-end: rgba(255,255,255,0.3);
     background-gradient-direction: vertical;
     font-size: 14pt;
     font-weight: bold;
-    border-radius: 10px;
-    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    border: none;
     color: white;
+    box-shadow:inset 0 -2px 0 0 rgba(0,0,0,0.7);
 }
 
 .keyboard-key:grayed {
@@ -2257,14 +2260,22 @@ StScrollBar StButton#vhandle:active {
    border-color: #808080;
 }
 
-.keyboard-key:checked,
+
 .keyboard-key:hover {
-    background: #303030;
-    border: 3px solid white;
+    background-gradient-start: rgba(255,255,255,0.3);
+    background-gradient-end: rgba(255,255,255,0.4);
+    background-gradient-direction: vertical;
+    border: none;
 }
 
+.keyboard-key:checked,
 .keyboard-key:active {
-    background: #808080;
+    padding-top: 2px;
+    background-gradient-start: rgba(255,255,255,0.2);
+    background-gradient-end: rgba(255,255,255,0.2);
+    background-gradient-direction: vertical;
+    box-shadow:inset 0 2px 0 0 rgba(0,0,0,0.8);
+    transition-duration: 100ms;
 }
 
 .keyboard-subkeys {
@@ -2272,7 +2283,7 @@ StScrollBar StButton#vhandle:active {
     padding: 5px;
     -arrow-border-radius: 10px;
     -arrow-background-color: #090909;
-    -arrow-border-width: 2px;
+    -arrow-border-width: 0;
     -arrow-border-color: white;
     -arrow-base: 20px;
     -arrow-rise: 10px;
