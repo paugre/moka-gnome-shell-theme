@@ -26,8 +26,8 @@ echo '#         Moka Gnome Shell Theme Install Script        #'
 echo '#------------------------------------------------------#'
 
 echo '#------------------------------------------------------#'
-echo '#         Installing requires the "User Themes"        #'
-echo '#         Gnome Shell extension                        #'
+echo '#         Using Moka requires the "User Themes"        #'
+echo '#         GNOME Shell extension                        #'
 echo '#------------------------------------------------------#'
 
 function continue {
