@@ -1,5 +1,4 @@
-#
-# spec file for package moka-gnome-shell-theme
+# Spec file for package moka-gnome-shell-theme
 #
 # Copyright (c) 2014 Sam Hewitt <hewittsamuel@gmail.com>
 #
