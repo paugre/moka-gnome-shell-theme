@@ -21,7 +21,7 @@
 
 /* default text style */
 stage {
-    font-family: cantarell, sans-serif;
+    font-family: "Clear Sans", cantarell, sans-serif;
     font-size: 11pt;
     color: white;
 }
